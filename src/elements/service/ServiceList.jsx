@@ -1,38 +1,48 @@
 import React ,{ Component }from "react";
-import { FiCast , FiLayers , FiUsers , FiMonitor } from "react-icons/fi";
-
+import { FiDroplet} from 'react-icons/fi';
+import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
+import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
+import MedicationOutlinedIcon from '@mui/icons-material/MedicationOutlined';
+import VaccinesOutlinedIcon from '@mui/icons-material/VaccinesOutlined';
+import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 const ServiceList = [
-    {
-        icon: <FiCast />,
-        title: 'Business Stratagy',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
-    },
-    {
-        icon: <FiLayers />,
-        title: 'Website Development',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
-    },
-    {
-        icon: <FiUsers />,
-        title: 'Marketing & Reporting',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
-    },
-    { 
-        icon: <FiMonitor />,
-        title: 'Mobile App Development',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
-    },
-    {
-        icon: <FiUsers />,
-        title: 'Marketing & Reporting',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
-    },
-    { 
-        icon: <FiMonitor />,
-        title: 'Mobile App Development',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
-    }
-]
+  {
+    icon: <FiDroplet />,
+    title: 'Blood Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  },
+  {
+    icon: <PaidOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'ATB Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  },
+  {
+    icon: <SailingOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'Aqua Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  },
+  {
+    icon: <LunchDiningOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'Food Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  },
+  {
+    icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'Immuno Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  },
+  {
+    icon: <MedicationOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'Drug Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  },
+];
 
 
 class ServiceThree extends Component{

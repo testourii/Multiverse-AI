@@ -2,112 +2,40 @@ import React, { Component } from "react";
 import { FaFacebookF , FaLinkedinIn , FaTwitter } from "react-icons/fa";
 
 let TeamContent = [
-    {
-        images: '01',
-        title: 'Jone Due',
-        designation: 'Sr. Web Developer',
-        socialNetwork: [
-            {
-                icon: <FaFacebookF />,
-                url: '#'
-            },
-            {
-                icon: <FaLinkedinIn />,
-                url: '#'
-            },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
-        ]
-    },
-    {
-        images: '02',
-        title: 'Fatima Asrafi',
-        designation: 'Front-end Engineer',
-        socialNetwork: [
-            {
-                icon: <FaFacebookF />,
-                url: '#'
-            },
-            {
-                icon: <FaLinkedinIn />,
-                url: '#'
-            },
-        ]
-    },
-    {
-        images: '03',
-        title: 'Al-Amin Bali',
-        designation: 'Sr. Graphic Designer',
-        socialNetwork: [
-            {
-                icon: <FaFacebookF />,
-                url: '#'
-            },
-            {
-                icon: <FaLinkedinIn />,
-                url: '#'
-            },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
-        ]
-    },
-    {
-        images: '06',
-        title: 'Jone Due',
-        designation: 'Sr. Web Developer',
-        socialNetwork: [
-            {
-                icon: <FaFacebookF />,
-                url: '#'
-            },
-            {
-                icon: <FaLinkedinIn />,
-                url: '#'
-            },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
-        ]
-    },
-    {
-        images: '05',
-        title: 'Fatima Asrafi',
-        designation: 'Front-end Engineer',
-        socialNetwork: [
-            {
-                icon: <FaFacebookF />,
-                url: '#'
-            },
-            {
-                icon: <FaLinkedinIn />,
-                url: '#'
-            },
-        ]
-    },
-    {
-        images: '12',
-        title: 'Al-Amin Bali',
-        designation: 'Sr. Graphic Designer',
-        socialNetwork: [
-            {
-                icon: <FaFacebookF />,
-                url: '#'
-            },
-            {
-                icon: <FaLinkedinIn />,
-                url: '#'
-            },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
-        ]
-    }
+  {
+    images: '01',
+    title: 'Dr. Aymen Yahyaoui',
+    designation: 'Senior AI/ML Researcher',
+    socialNetwork: [
+      {
+        icon: <FaFacebookF />,
+        url: '#',
+      },
+      {
+        icon: <FaLinkedinIn />,
+        url: '#',
+      },
+      {
+        icon: <FaTwitter />,
+        url: '#',
+      },
+    ],
+  },
+  {
+    images: '02',
+    title: 'DVM. Aymen mosbah',
+    designation: 'Senior biomedical researcher',
+    socialNetwork: [
+      {
+        icon: <FaFacebookF />,
+        url: '#',
+      },
+      {
+        icon: <FaLinkedinIn />,
+        url: '#',
+      },
+    ],
+  }
 ];
 
 

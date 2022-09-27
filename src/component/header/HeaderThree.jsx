@@ -66,53 +66,95 @@ class HeaderThree extends Component{
             logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
         }
         
-        return(
-            <header className={`header-area header-style-two header--fixed ${color}`}>
-                <div className="header-wrapper">
-                    <div className="header-left d-flex align-items-center">
-                        <div className="logo">
-                            <a href={this.props.homeLink}>
-                                {logoUrl}
-                            </a>
-                        </div>
-                        <nav className="mainmenunav d-lg-block ml--50">
-                            <Scrollspy className="mainmenu" items={['home','about','service','portfolio','blog','contact']} currentClassName="is-current" offset={-200}>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#products">Products</a></li>
-                                <li><a href="#research">Research</a></li>
-                                <li><a href="#team">Team</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#experts-panel">Experts Panel</a></li>
-                                <li><a href="#partners">Partners</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </Scrollspy>
-                        </nav>
-                    </div>
-                    <div className="header-right">
-                        <div className="social-share-inner">
-                            <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
-                                {SocialShare.map((val , i) => (
-                                    <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="header-btn">
-                            <a className="rn-btn" href="https://bloodscan.tn">
-                                <span>Blood Scan</span>
-                            </a>
-                        </div>
-                        {/* Start Humberger Menu  */}
-                        <div className="humberger-menu d-block d-lg-none pl--20">
-                            <span onClick={this.menuTrigger} className="menutrigger text-white"><FiMenu /></span>
-                        </div>
-                        {/* End Humberger Menu  */}
-                        <div className="close-menu d-block d-lg-none">
-                            <span onClick={this.CLoseMenuTrigger} className="closeTrigger"><FiX /></span>
-                        </div>
-                    </div>
+        return (
+          <header
+            className={`header-area header-style-two header--fixed ${color}`}
+          >
+            <div className='header-wrapper'>
+              <div className='header-left d-flex align-items-center'>
+                <div className='logo'>
+                  <a href={this.props.homeLink}>{logoUrl}</a>
                 </div>
-            </header>
-        )
+                <nav className='mainmenunav d-lg-block ml--50'>
+                  <Scrollspy
+                    className='mainmenu'
+                    items={[
+                      'home',
+                      'products',
+                      'research',
+                      'team',
+                      'about',
+                      'experts-panel',
+                      'partners',
+                      'contact',
+                    ]}
+                    currentClassName='is-current'
+                    offset={-200}
+                  >
+                    <li>
+                      <a href='#home'>Home</a>
+                    </li>
+                    <li>
+                      <a href='#products'>Products</a>
+                    </li>
+                    <li>
+                      <a href='#research'>Research</a>
+                    </li>
+                    <li>
+                      <a href='#team'>Team</a>
+                    </li>
+                    <li>
+                      <a href='#about'>About</a>
+                    </li>
+                    <li>
+                      <a href='#experts-panel'>Experts Panel</a>
+                    </li>
+                    <li>
+                      <a href='#partners'>Partners</a>
+                    </li>
+                    <li>
+                      <a href='#contact'>Contact</a>
+                    </li>
+                  </Scrollspy>
+                </nav>
+              </div>
+              <div className='header-right'>
+                <div className='social-share-inner'>
+                  <ul className='social-share social-style--2 color-black d-flex justify-content-start liststyle'>
+                    {SocialShare.map((val, i) => (
+                      <li key={i}>
+                        <a href={`${val.link}`}>{val.Social}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className='header-btn'>
+                  <a className='rn-btn' href='https://bloodscan.tn'>
+                    <span>Blood Scan</span>
+                  </a>
+                </div>
+                {/* Start Humberger Menu  */}
+                <div className='humberger-menu d-block d-lg-none pl--20'>
+                  <span
+                    onClick={this.menuTrigger}
+                    className='menutrigger text-white'
+                  >
+                    <FiMenu />
+                  </span>
+                </div>
+                {/* End Humberger Menu  */}
+                <div className='close-menu d-block d-lg-none'>
+                  <span
+                    onClick={this.CLoseMenuTrigger}
+                    className='closeTrigger'
+                  >
+                    <FiX />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </header>
+        );
     }
 }
 export default HeaderThree;
