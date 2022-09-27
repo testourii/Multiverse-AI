@@ -151,6 +151,7 @@ class HomeParticles extends Component{
                 
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
                     <div className="frame-layout__particles">
+                     
                     </div>
                     <div className="bg_image bg_image--27">
                             {SlideList.map((value , index) => (

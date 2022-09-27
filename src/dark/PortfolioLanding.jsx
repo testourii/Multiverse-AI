@@ -6,48 +6,130 @@ import TextLoop from "react-text-loop";
 import HeaderThree from "../component/header/HeaderThree";
 import FooterTwo from "../component/footer/FooterTwo";
 import TabTwo from "../elements/tab/TabTwo";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { useCallback } from "react";
 import ContactThree from "../elements/contact/ContactThree";
 import PortfolioList from "../elements/portfolio/PortfolioList";
 import ServiceList from "../elements/service/ServiceList";
 import BlogContent from "../elements/blog/BlogContent";
 
+
 const SlideList = [
     {
-        textPosition: 'text-left',
-        category: 'Welcome to my World',
-        description: '',
-        buttonText: '',
-        buttonLink: ''
+        textPosition: 'text-center',
+        category: '',
+        title: 'Creative One Page',
+        description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
+        buttonText: 'Contact Us',
+        buttonLink: '/contact'
     }
 ]
 const PortfolioLanding = () => {
+    const particlesInit = useCallback(async (engine) => {
+        console.log(engine);
+        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async (container) => {
+        await console.log(container);
+    }, []);
     let title = 'About Me',
         description = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered <a href="#">alteration</a> in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,';
-    const PostList = BlogContent.slice(0 , 3);
+    const PostList = BlogContent.slice(0, 3);
     return (
         <div className="active-dark">
-            <Helmet pageTitle="Portfolio Landing" />
+            <Helmet pageTitle="Multiverse AI" />
 
-            <HeaderThree homeLink="/" logo="symbol-dark" color="color-black"/>
+            <HeaderThree homeLink="/" logo="symbol-dark" color="color-black" />
             {/* Start Slider Area   */}
-            <div id="home" className="fix">
-                <div className="slider-wrapper">
-                    {/* Start Single Slide */}
-                    {SlideList.map((value , index) => (
-                        <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25" key={index}>
+            <div className="slider-activation slider-creative-agency with-particles" id="home">
+                <div className="frame-layout__particles">
+                    <Particles
+                        id="tsparticles"
+                        init={particlesInit}
+                        loaded={particlesLoaded}
+                        options={{
+                            fullScreen: { enable: false },
+                            fpsLimit: 120,
+                            interactivity: {
+                                events: {
+                                    onClick: {
+                                        enable: true,
+                                        mode: "push",
+                                    },
+                                    onHover: {
+                                        enable: true,
+                                        mode: "repulse",
+                                    },
+                                    resize: true,
+                                },
+                                modes: {
+                                    push: {
+                                        quantity: 4,
+                                    },
+                                    repulse: {
+                                        distance: 200,
+                                        duration: 0.4,
+                                    },
+                                },
+                            },
+                            particles: {
+                                color: {
+                                    value: "#ffffff",
+                                },
+                                links: {
+                                    color: "#ffffff",
+                                    distance: 150,
+                                    enable: true,
+                                    opacity: 0.5,
+                                    width: 1,
+                                },
+                                collisions: {
+                                    enable: true,
+                                },
+                                move: {
+                                    directions: "none",
+                                    enable: true,
+                                    outModes: {
+                                        default: "bounce",
+                                    },
+                                    random: false,
+                                    speed: 6,
+                                    straight: false,
+                                },
+                                number: {
+                                    density: {
+                                        enable: true,
+                                        area: 1600,
+                                    },
+                                    value: 80,
+                                },
+                                opacity: {
+                                    value: 0.5,
+                                },
+                                shape: {
+                                    type: "circle",
+                                },
+                                size: {
+                                    value: { min: 1, max: 5 },
+                                },
+                            },
+                            detectRetina: true,
+                        }}
+                    />                    </div>
+                <div className="bg_image bg_image--27">
+                    {SlideList.map((value, index) => (
+                        <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index}>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             {value.category ? <span>{value.category}</span> : ''}
-                                            <h1 className="title">Hi, I’m Jone Doe <br/>
-                                            <TextLoop>
-                                                <span> JS Developer.</span>
-                                                <span> UI/UX Designer.</span>
-                                                <span> Content Writter.</span>
-                                            </TextLoop>{" "}
-                                            </h1>
-                                            <h2>based in USA.</h2>
+                                            {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                             {value.description ? <p className="description">{value.description}</p> : ''}
                                             {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
                                         </div>
@@ -56,40 +138,10 @@ const PortfolioLanding = () => {
                             </div>
                         </div>
                     ))}
-                    {/* End Single Slide */}
                 </div>
             </div>
-            {/* End Slider Area   */} 
+            {/* End Slider Area   */}
 
-            {/* Start About Area */}
-            <div id="about" className="fix">
-                <div className="about-area ptb--120  bg_color--1">
-                    <div className="about-wrapper">
-                        <div className="container">
-                            <div className="row row--35 align-items-center">
-                                <div className="col-lg-5">
-                                    <div className="thumbnail">
-                                        <img className="w-100" src="/assets/images/about/about-8.jpg" alt="About Images"/>
-                                    </div>
-                                </div>
-                                <div className="col-lg-7">
-                                    <div className="about-inner inner">
-                                        <div className="section-title">
-                                            <h2 className="title">{title}</h2>
-                                            <p className="description">{description}</p>
-                                        </div>
-                                        <div className="row mt--30">
-                                            <TabTwo tabStyle="tab-style--1" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            {/* End About Area */}
 
             {/* Start Service Area  */}
             <div id="service" className="fix">
@@ -109,9 +161,9 @@ const PortfolioLanding = () => {
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
-            {/* End Service Area  */} 
+            {/* End Service Area  */}
 
             {/* Start Portfolio Area */}
             <div id="portfolio" className="fix">
@@ -155,12 +207,12 @@ const PortfolioLanding = () => {
                             </div>
                         </div>
                         <div className="row mt--60 mt_sm--40">
-                            {PostList.map((value , i ) => (
+                            {PostList.map((value, i) => (
                                 <div className="col-lg-4 col-md-6 col-12" key={i}>
                                     <div className="blog blog-style--1">
                                         <div className="thumbnail">
                                             <a href="/blog-details">
-                                                <img className="w-100" src={`/assets/images/blog/blog-${value.images}.jpg`} alt="Blog Images"/>
+                                                <img className="w-100" src={`/assets/images/blog/blog-${value.images}.jpg`} alt="Blog Images" />
                                             </a>
                                         </div>
                                         <div className="content">
@@ -173,8 +225,8 @@ const PortfolioLanding = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>    
-                    </div>    
+                        </div>
+                    </div>
                 </div>
             </div>
             {/* End Blog Area */}
@@ -195,7 +247,7 @@ const PortfolioLanding = () => {
                 </ScrollToTop>
             </div>
             {/* End Back To Top */}
-            
+
         </div>
     )
 }
