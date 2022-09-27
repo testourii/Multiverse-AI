@@ -2,10 +2,8 @@ import React from 'react';
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Helmet from "../component/common/Helmet";
-import TextLoop from "react-text-loop";
 import HeaderThree from "../component/header/HeaderThree";
 import FooterTwo from "../component/footer/FooterTwo";
-import TabTwo from "../elements/tab/TabTwo";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
@@ -37,9 +35,7 @@ const PortfolioLanding = () => {
     const particlesLoaded = useCallback(async (container) => {
         await console.log(container);
     }, []);
-    let title = 'About Me',
-        description = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered <a href="#">alteration</a> in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,';
-    const PostList = BlogContent.slice(0, 3);
+   const PostList = BlogContent.slice(0, 3);
     return (
         <div className="active-dark">
             <Helmet pageTitle="Multiverse AI" />
