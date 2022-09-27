@@ -143,7 +143,9 @@ const PortfolioLanding = () => {
                           ''
                         )}
                         {value.description ? (
-                          <p className='description' style={{ color: 'white' }}>{value.description}</p>
+                          <p className='description' style={{ color: 'white' }}>
+                            {value.description}
+                          </p>
                         ) : (
                           ''
                         )}

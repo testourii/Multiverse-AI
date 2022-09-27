@@ -30,9 +30,9 @@
         z-index: 2;
         top: 0;
         left: 0;
-        @media #{$large-mobile} {
-            display: none;
-        }
+        // @media #{$large-mobile} {
+        //     display: none;
+        // }
     }
     .inner{
         position: relative;
