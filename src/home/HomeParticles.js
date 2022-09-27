@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import { slickDot } from "../page-demo/script";
 import Scrollspy from 'react-scrollspy';
 import ScrollToTop from 'react-scroll-up';
-import Particles from 'react-particles-js';
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
 import ServiceList from "../elements/service/ServiceList";
 import CounterOne from "../elements/counters/CounterOne";
@@ -152,26 +151,6 @@ class HomeParticles extends Component{
                 
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
                     <div className="frame-layout__particles">
-                        <Particles
-                            params={{
-                                "particles": {
-                                    "number": {
-                                        "value": 50
-                                    },
-                                    "size": {
-                                        "value": 4
-                                    }
-                                },
-                                "interactivity": {
-                                    "events": {
-                                        "onhover": {
-                                            "enable": true,
-                                            "mode": "repulse"
-                                        }
-                                    }
-                                }
-                            }}
-                        />
                     </div>
                     <div className="bg_image bg_image--27">
                             {SlideList.map((value , index) => (
