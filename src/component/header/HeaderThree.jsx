@@ -59,7 +59,7 @@ class HeaderThree extends Component{
         }else if(logo === 'dark'){
             logoUrl = <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />;
         }else if(logo === 'symbol-dark'){
-            logoUrl = <img src="/assets/images/logo/logo-symbol-dark.png" alt="Digital Agency" />;
+            logoUrl = <img src="/assets/images/logo/logo-IA.png" alt="Digital Agency" />;
         }else if(logo === 'symbol-light'){
             logoUrl = <img src="/assets/images/logo/logo-symbol-light.png" alt="Digital Agency" />;
         }else{
@@ -78,10 +78,12 @@ class HeaderThree extends Component{
                         <nav className="mainmenunav d-lg-block ml--50">
                             <Scrollspy className="mainmenu" items={['home','about','service','portfolio','blog','contact']} currentClassName="is-current" offset={-200}>
                                 <li><a href="#home">Home</a></li>
+                                <li><a href="#products">Products</a></li>
+                                <li><a href="#research">Research</a></li>
+                                <li><a href="#team">Team</a></li>
                                 <li><a href="#about">About</a></li>
-                                <li><a href="#service">Service</a></li>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#experts-panel">Experts Panel</a></li>
+                                <li><a href="#partners">Partners</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </Scrollspy>
                         </nav>
@@ -95,8 +97,8 @@ class HeaderThree extends Component{
                             </ul>
                         </div>
                         <div className="header-btn">
-                            <a className="rn-btn" href="https://themeforest.net/checkout/from_item/25457315?license=regular">
-                                <span>buy now</span>
+                            <a className="rn-btn" href="https://bloodscan.tn">
+                                <span>Blood Scan</span>
                             </a>
                         </div>
                         {/* Start Humberger Menu  */}
