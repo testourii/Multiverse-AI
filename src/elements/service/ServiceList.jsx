@@ -5,19 +5,9 @@ import MedicationOutlinedIcon from '@mui/icons-material/MedicationOutlined';
 import VaccinesOutlinedIcon from '@mui/icons-material/VaccinesOutlined';
 import CoronavirusOutlinedIcon from '@mui/icons-material/CoronavirusOutlined';
 import { FaFish } from 'react-icons/fa'
+import Badge from '@mui/material/Badge';
+
 const ServiceList = [
-  {
-    icon: <FiDroplet />,
-    title: 'Blood Scan',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-  {
-    icon: <CoronavirusOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'ATB Scan',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
   {
     icon: <FaFish />,
     title: 'Aqua Scan',
@@ -44,33 +34,66 @@ const ServiceList = [
   },
 ];
 
+const ServiceListReady = [
+  {
+    icon: <FiDroplet />,
+    title: 'Blood Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+    url: 'http://www.bloodscan.tn:5000',
+  },
+  {
+    icon: <CoronavirusOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'ATB Scan',
+    description:
+      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+    url: 'http://www.atbscan.tn:5000',
+  }
+];
+
+
+
 
 class ServiceThree extends Component{
     render(){
         const {column } = this.props;
-        const ServiceContent = ServiceList.slice(0 , this.props.item);
         
-        return(
-            <React.Fragment>
-                <div className="row">
-                    {ServiceContent.map( (val , i) => (
-                        <div className={`${column}`} key={i}>
-                            <a href="/service-details">
-                                <div className="service service__style--2">
-                                    <div className="icon">
-                                        {val.icon}
-                                    </div>
-                                    <div className="content">
-                                        <h3 className="title">{val.title}</h3>
-                                        <p>{val.description}</p>
-                                    </div>
-                                </div>
-                            </a>
+        return (
+          <React.Fragment>
+            <div className='row'>
+              {ServiceListReady.map((val, i) => (
+                <div className={`${column}`} key={i}>
+                  <a href={val.url}>
+                    <div className='service service__style--2'>
+                      <Badge badgeContent={0} color='warning'>
+                        <div className='icon'>{val.icon}</div>
+                        <div className='content'>
+                          <h3 className='title'> &nbsp;{val.title}</h3>
+                          <p>{val.description}</p>
                         </div>
-                    ))}
+                      </Badge>{' '}
+                    </div>
+                  </a>
                 </div>
-            </React.Fragment>
-        )
+              ))}
+              {ServiceList.map((val, i) => (
+                <div className={`${column}`} key={i}>
+                  {' '}
+                  <div className='service service__style--2'>
+                    {' '}
+                    <Badge badgeContent={'Under construction'} color='warning'>
+                      <div className='icon'>{val.icon}</div>
+                      <div className='content'>
+                        <h3 className='title'>{val.title}</h3>
+                        <p>{val.description}</p>
+                      </div>
+                    </Badge>{' '}
+                  </div>{' '}
+                </div>
+              ))}
+            </div>
+          </React.Fragment>
+        );
     }
 }
 export default ServiceThree;

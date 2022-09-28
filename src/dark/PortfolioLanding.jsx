@@ -8,7 +8,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import ContactThree from "../elements/contact/ContactThree";
-import PortfolioList from "../elements/portfolio/PortfolioList";
+// import PortfolioList from "../elements/portfolio/PortfolioList";
 import ServiceList from "../elements/service/ServiceList";
 import BlogContent from "../elements/blog/BlogContent";
 
@@ -24,7 +24,7 @@ const SlideList = [
         title: 'Multiverse AI',
         description: 'AI-Empowered Digital Transition towards Sustainable Development.',
         buttonText: 'Blood Scan',
-        buttonLink: 'https://www.bloodscan.tn'
+        buttonLink: 'http://www.bloodscan.tn:5000'
     }
 ]
 const PortfolioLanding = () => {
@@ -151,18 +151,30 @@ const PortfolioLanding = () => {
                           ''
                         )}
                         {value.buttonText ? (
-                          <div className='slide-btn'>
-                            <a
-                              className='rn-button-style--2 btn-primary-color'
-                              href={`${value.buttonLink}`}
-                            >
-                              {value.buttonText}
-                            </a>
-                          </div>
+                          <>
+                            {' '}
+                            <div className='slide-btn'>
+                              <a
+                                className='rn-button-style--2 btn-primary-color'
+                                href={`${value.buttonLink}`}
+                              >
+                                {value.buttonText}
+                              </a>
+                            </div>
+                            <div className='slide-btn'>
+                              <a
+                                className='rn-button-style--2 btn-primary-color'
+                                href='http://www.atbscan.tn:5000'
+                              >
+                                ATB Scan
+                              </a>
+                            </div>
+                          </>
                         ) : (
                           ''
                         )}
                       </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -241,7 +253,7 @@ const PortfolioLanding = () => {
                       <div className='content'>
                         <p className='blogtype'>{value.category}</p>
                         <h4 className='title'>
-                        <a href={value.url}>{value.title}</a>
+                          <a href={value.url}>{value.title}</a>
                         </h4>
                         <div className='blog-btn'>
                           <a className='rn-btn text-white' href={value.url}>
@@ -280,7 +292,6 @@ const PortfolioLanding = () => {
               <div className='col-lg-6'>
                 <div className='section-title service-style--3 text-left mb--25 mb_sm--0'>
                   <h2 className='title'>Meet the Team</h2>
-                  <p>Our team ....</p>
                 </div>
               </div>
             </div>
@@ -319,7 +330,7 @@ const PortfolioLanding = () => {
                         both AgriHealth and AI ecosystems.
                       </p>
                     </div>
-                    <div className='row mt--30'>
+                    {/* <div className='row mt--30'>
                       <div className='col-lg-6 col-md-12 col-sm-12 col-12'>
                         <div className='about-us-list'>
                           <h3 className='title'>Who we are</h3>
@@ -338,7 +349,7 @@ const PortfolioLanding = () => {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -348,14 +359,14 @@ const PortfolioLanding = () => {
         {/* End About Area */}
 
         {/* Start expert Panel Area */}
-        <div id='experts-panel' className='fix'>
+        {/* <div id='experts-panel' className='fix'>
           <div className='portfolio-area ptb--120 bg_color--5'>
             <div className='portfolio-sacousel-inner'>
               <div className='container'>
                 <div className='row'>
                   <div className='col-lg-12'>
                     <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
-                      <h2 className='title'>expert Panel</h2>
+                      <h2 className='title'>Expert Panel</h2>
                       <p>
                         There are many variations of passages of Lorem Ipsum
                         available, but the majority have suffered alteration.
@@ -382,7 +393,7 @@ const PortfolioLanding = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* End expert Panel Area */}
 
         {/* Start partners Area */}

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
+// import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
 import { FiX , FiMenu} from "react-icons/fi";
 import Scrollspy from 'react-scrollspy'
 
 const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
+    // {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
+    // {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
+    // {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
+    // {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
 class HeaderThree extends Component{
     constructor(props) {
@@ -82,9 +82,9 @@ class HeaderThree extends Component{
                       'home',
                       'products',
                       'research',
-                      'team',
+                       'team',
                       'about',
-                      'experts-panel',
+                      // 'experts-panel',
                       'partners',
                       'contact',
                     ]}
@@ -106,9 +106,9 @@ class HeaderThree extends Component{
                     <li>
                       <a href='#about'>About</a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href='#experts-panel'>Experts Panel</a>
-                    </li>
+                    </li> */}
                     <li>
                       <a href='#partners'>Partners</a>
                     </li>
@@ -128,11 +128,11 @@ class HeaderThree extends Component{
                     ))}
                   </ul>
                 </div>
-                <div className='header-btn'>
+                {/* <div className='header-btn'>
                   <a className='rn-btn' href='https://bloodscan.tn'>
                     <span>Blood Scan</span>
                   </a>
-                </div>
+                </div> */}
                 {/* Start Humberger Menu  */}
                 <div className='humberger-menu d-block d-lg-none pl--20'>
                   <span
