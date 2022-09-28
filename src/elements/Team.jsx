@@ -3,7 +3,7 @@ import { FaFacebookF , FaLinkedinIn , FaTwitter } from "react-icons/fa";
 
 let TeamContent = [
   {
-    images: '01',
+    images: 'aymen',
     title: 'Dr. Aymen Yahyaoui',
     designation: 'Senior AI/ML Researcher',
     socialNetwork: [
@@ -22,7 +22,7 @@ let TeamContent = [
     ],
   },
   {
-    images: '02',
+    images: 'mosbah',
     title: 'DVM. Aymen mosbah',
     designation: 'Senior biomedical researcher',
     socialNetwork: [
@@ -48,7 +48,7 @@ class Team extends Component{
                     <div className={`${column}`} key={i}>
                         <div className="team">
                             <div className="thumbnail">
-                                <img src={`/assets/images/team/team-${value.images}.jpg`} alt="Blog Images"/>
+                                <img src={`/assets/images/team/${value.images}.jpg`} alt="Blog Images"/>
                             </div>
                             <div className="content">
                                 <h4 className="title">{value.title}</h4>

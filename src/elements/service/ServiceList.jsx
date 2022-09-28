@@ -1,10 +1,10 @@
 import React ,{ Component }from "react";
 import { FiDroplet} from 'react-icons/fi';
 import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
-import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import MedicationOutlinedIcon from '@mui/icons-material/MedicationOutlined';
 import VaccinesOutlinedIcon from '@mui/icons-material/VaccinesOutlined';
-import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
+import CoronavirusOutlinedIcon from '@mui/icons-material/CoronavirusOutlined';
+import { FaFish } from 'react-icons/fa'
 const ServiceList = [
   {
     icon: <FiDroplet />,
@@ -13,13 +13,13 @@ const ServiceList = [
       'I throw myself down among the tall grass by the stream as I lie close to the earth.',
   },
   {
-    icon: <PaidOutlinedIcon sx={{ fontSize: 50 }} />,
+    icon: <CoronavirusOutlinedIcon sx={{ fontSize: 50 }} />,
     title: 'ATB Scan',
     description:
       'I throw myself down among the tall grass by the stream as I lie close to the earth.',
   },
   {
-    icon: <SailingOutlinedIcon sx={{ fontSize: 50 }} />,
+    icon: <FaFish />,
     title: 'Aqua Scan',
     description:
       'I throw myself down among the tall grass by the stream as I lie close to the earth.',

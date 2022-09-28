@@ -14,6 +14,7 @@ import BlogContent from "../elements/blog/BlogContent";
 
 // import CounterOne from '../elements/counters/CounterOne';
 import Testimonial from '../elements/Testimonial';
+import Goals from '../elements/Goals';
 import Team from '../elements/Team';
 
 const SlideList = [
@@ -38,7 +39,7 @@ const PortfolioLanding = () => {
     const particlesLoaded = useCallback(async (container) => {
         await console.log(container);
     }, []);
-   const PostList = BlogContent.slice(0, 3);
+   const PostList = BlogContent;
     return (
       <div className='active-dark'>
         <Helmet pageTitle='Multiverse AI' />
@@ -170,7 +171,16 @@ const PortfolioLanding = () => {
           </div>
         </div>
         {/* End Slider Area   */}
-
+        <div className='rn-testimonial-area bg_color--1 ptb--120' id='partners'>
+          <div className='container'>
+            <div className='col-lg-12'>
+              <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
+                <h2 className='title'>Sustainable Development Goals</h2>
+              </div>
+            </div>
+            <Goals />
+          </div>
+        </div>
         {/* Start Service Area  */}
         <div id='products' className='fix'>
           <div className='service-area creative-service-wrapper ptb--120 bg_color--5'>
@@ -220,7 +230,7 @@ const PortfolioLanding = () => {
                   <div className='col-lg-4 col-md-6 col-12' key={i}>
                     <div className='blog blog-style--1'>
                       <div className='thumbnail'>
-                        <a href='/blog-details'>
+                        <a href={value.url}>
                           <img
                             className='w-100'
                             src={`/assets/images/blog/blog-${value.images}.jpg`}
@@ -231,10 +241,10 @@ const PortfolioLanding = () => {
                       <div className='content'>
                         <p className='blogtype'>{value.category}</p>
                         <h4 className='title'>
-                          <a href='/blog-details'>{value.title}</a>
+                        <a href={value.url}>{value.title}</a>
                         </h4>
                         <div className='blog-btn'>
-                          <a className='rn-btn text-white' href='/blog-details'>
+                          <a className='rn-btn text-white' href={value.url}>
                             Read More
                           </a>
                         </div>
@@ -290,7 +300,7 @@ const PortfolioLanding = () => {
                   <div className='thumbnail'>
                     <img
                       className='w-100'
-                      src='/assets/images/about/about-3.jpg'
+                      src='/assets/images/about/about-45.jpg'
                       alt='About Images'
                     />
                   </div>
