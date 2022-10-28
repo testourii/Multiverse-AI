@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
 import { FiX , FiMenu} from "react-icons/fi";
 import Scrollspy from 'react-scrollspy'
+import { Link } from 'react-router-dom';
 
 const SocialShare = [
     // {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
@@ -112,6 +113,14 @@ class HeaderThree extends Component{
                     <li>
                       <a href='#partners'>Partners</a>
                     </li>
+                    <li className="has-droupdown"><Link >ressources</Link>
+                                    <ul className="submenu">
+                                        <li><Link to="/Blog">Blog</Link></li>
+                                        <li><Link to="/Events ">Events </Link></li>
+                                        <li><Link to="/News">News</Link></li>
+                                        <li><Link to="/Tools">Tools</Link></li>
+                                    </ul>
+                                </li>
                     <li>
                       <a href='#contact'>Contact</a>
                     </li>

@@ -19,18 +19,12 @@ class ContactThree extends Component{
                   <div className='section-title text-left mb--50'>
                     <h2 className='title'>{this.props.contactTitle}</h2>
                     <p className='description'>
-                      Connect with us via phone:{' '}
-                      <a href='tel:+21653928786'>53928786</a> |{' '}
-                      <a href='tel:+21699705556'>99705556</a><br/> or email:
-                      <a href='mailto:aymen.yahyaoui@ept.rnu.tn'>
+                      Connect with us via email:
+                      <a href='mailto:contact.multiverseai@gmail.com'>
                         {' '}
-                        aymen.yahyaoui@ept.rnu.tn
+                        contact.multiverseai@gmail.com
                       </a>{' '}
-                     |
-                      <a href='mailto:aminemosbah@hotmail.com'>
-                        {' '}
-                        aminemosbah@hotmail.com
-                      </a>{' '}
+                    
                     </p>
                   </div>
                   <div className='form-wrapper'>

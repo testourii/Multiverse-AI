@@ -20,7 +20,7 @@ const BlogContent = [
     },
     {
         images: '014',
-        title: 'Efects of dietary garlic against cadmium induced immunotoxicity in sea bass head, kidney and liver ssues: A transcriptomic approach',
+        title: 'Effects of dietary garlic against cadmium induced immunotoxicity in sea bass head, kidney and liver tissues: A transcriptomic approach',
         category: 'Cadmium | Garlic  | Toxicity',
         url:'https://www.researchgate.net/publication/320961098_Efects_of_dietary_garlic_against_cadmium_induced_immunotoxicity_in_sea_bass_head_kidney_and_liver_ssues_A_transcriptomic_approach'
     },

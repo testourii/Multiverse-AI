@@ -12,25 +12,25 @@ const ServiceList = [
     icon: <FaFish />,
     title: 'Aqua Scan',
     description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+      'Aquaculture management system.',
   },
   {
     icon: <LunchDiningOutlinedIcon sx={{ fontSize: 50 }} />,
     title: 'Food Scan',
     description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+      'Food safety assessments.',
   },
-  {
-    icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'Immuno Scan',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
+  // {
+  //   icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
+  //   title: 'Immuno Scan',
+  //   description:
+  //     'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+  // },
   {
     icon: <MedicationOutlinedIcon sx={{ fontSize: 50 }} />,
     title: 'Drug Scan',
     description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+      'Drug combination to reduce therapeutic failure.',
   },
 ];
 
@@ -39,15 +39,22 @@ const ServiceListReady = [
     icon: <FiDroplet />,
     title: 'Blood Scan',
     description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+      'Blood Cells anomalies detection',
     url: 'http://www.bloodscan.tn:5000',
   },
   {
     icon: <CoronavirusOutlinedIcon sx={{ fontSize: 50 }} />,
     title: 'ATB Scan',
     description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
+      'Antibiotic susceptibility test interpretation',
     url: 'http://www.atbscan.tn:5000',
+  },
+  {
+    icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
+    title: 'Tik Scan ',
+    description:
+      'Ectoparasite identification',
+    url: 'http://tickscan.icarda.org/',
   }
 ];
 

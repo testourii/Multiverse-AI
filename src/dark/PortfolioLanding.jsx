@@ -183,7 +183,7 @@ const PortfolioLanding = () => {
           </div>
         </div>
         {/* End Slider Area   */}
-        <div className='rn-testimonial-area bg_color--1 ptb--120' id='partners'>
+        <div className='rn-testimonial-area bg_color--1 ptb--120' id='SDG'>
           <div className='container'>
             <div className='col-lg-12'>
               <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
@@ -202,8 +202,7 @@ const PortfolioLanding = () => {
                   <div className='section-title text-left mb--30'>
                     <h2>Our Products</h2>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration.
+                    We propose a set of anomaly detection modules to recognize hidden patterns within big data structures, model them and offer the best course of action for risk mitigation.
                     </p>
                   </div>
                 </div>
@@ -230,9 +229,8 @@ const PortfolioLanding = () => {
                   <div className='section-title text-center'>
                     <h2>Research</h2>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, <br />
-                      but the majority have suffered alteration.
+                    One of most important goals of Multiverse AI  is to contribute in the research domain and promote AI and its use to propose innovative and scientific solutions related to Agrihealth and  Computational Biology.
+
                     </p>
                   </div>
                 </div>
