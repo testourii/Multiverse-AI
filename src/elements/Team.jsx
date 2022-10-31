@@ -56,7 +56,7 @@ class Team extends Component{
           //   ))}
           // </React.Fragment>
           <img
-            src={`/assets/images/team/team.jpg`}
+            src={`/assets/images/team/Team.png`}
             alt='Blog Images'
           />
         );

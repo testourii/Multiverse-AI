@@ -8,7 +8,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import ContactThree from "../elements/contact/ContactThree";
-// import PortfolioList from "../elements/portfolio/PortfolioList";
+import PortfolioList from "../elements/portfolio/PortfolioList";
 import ServiceList from "../elements/service/ServiceList";
 import BlogContent from "../elements/blog/BlogContent";
 
@@ -174,7 +174,6 @@ const PortfolioLanding = () => {
                           ''
                         )}
                       </div>
-                      
                     </div>
                   </div>
                 </div>
@@ -202,7 +201,9 @@ const PortfolioLanding = () => {
                   <div className='section-title text-left mb--30'>
                     <h2>Our Products</h2>
                     <p>
-                    We propose a set of anomaly detection modules to recognize hidden patterns within big data structures, model them and offer the best course of action for risk mitigation.
+                      We propose a set of anomaly detection modules to recognize
+                      hidden patterns within big data structures, model them and
+                      offer the best course of action for risk mitigation.
                     </p>
                   </div>
                 </div>
@@ -229,8 +230,10 @@ const PortfolioLanding = () => {
                   <div className='section-title text-center'>
                     <h2>Research</h2>
                     <p>
-                    One of most important goals of Multiverse AI  is to contribute in the research domain and promote AI and its use to propose innovative and scientific solutions related to Agrihealth and  Computational Biology.
-
+                      One of most important goals of Multiverse AI is to
+                      contribute in the research domain and promote AI and its
+                      use to propose innovative and scientific solutions related
+                      to Agrihealth and Computational Biology.
                     </p>
                   </div>
                 </div>
@@ -357,17 +360,18 @@ const PortfolioLanding = () => {
         {/* End About Area */}
 
         {/* Start expert Panel Area */}
-        {/* <div id='experts-panel' className='fix'>
+        <div id='experts-panel' className='fix'>
           <div className='portfolio-area ptb--120 bg_color--5'>
             <div className='portfolio-sacousel-inner'>
               <div className='container'>
                 <div className='row'>
                   <div className='col-lg-12'>
                     <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
-                      <h2 className='title'>Expert Panel</h2>
+                      <h2 className='title'>Experts Panel</h2>
                       <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration.
+                        Our experts bring together expertise in medical
+                        sciences, artificial intelligence and different life
+                        sciences industries.
                       </p>
                     </div>
                   </div>
@@ -382,8 +386,11 @@ const PortfolioLanding = () => {
                 <div className='row'>
                   <div className='col-lg-12'>
                     <div className='view-more-btn mt--60 mt_sm--30 text-center'>
-                      <a className='rn-button-style--2 btn-solid' href='/blog'>
-                        <span>View More</span>
+                      <a
+                        className='rn-button-style--2 btn-solid'
+                        href='https://docs.google.com/forms/d/e/1FAIpQLSdOFnBlw_M8cprPTYSEynFh3TKDujLCQOLvHK5J_5WqSv_V9g/viewform'
+                      >
+                        <span>Join Us</span>
                       </a>
                     </div>
                   </div>
@@ -391,7 +398,7 @@ const PortfolioLanding = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* End expert Panel Area */}
 
         {/* Start partners Area */}

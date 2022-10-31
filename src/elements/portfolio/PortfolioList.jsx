@@ -1,68 +1,65 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
 
-const PortfolioListContent = [
-    {
-        image: 'image-1',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        image: 'image-2',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        image: 'image-3',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        image: 'image-4',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        image: 'image-3',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        image: 'image-4',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    }
-]
+import {  FaLinkedinIn } from "react-icons/fa";
+
+let TeamContent = [
+  {
+    images: 'Takwa',
+    title: 'Dr. Takoua Abdellatif',
+    designation: 'Associate professor',
+    socialNetwork: [
+    
+      {
+        icon: <FaLinkedinIn />,
+        url: '#',
+      },
+    ],
+  },
+  {
+    images: 'ramzi',
+    title: 'Mr. Ramzi Zelfani',
+    designation: 'Senior IT Engineer',
+    socialNetwork: [
+     
+      {
+        icon: <FaLinkedinIn />,
+        url: '#',
+      }
+    ],
+  }
+];
+
 
 class PortfolioList extends Component{
     render(){
-        const {column , styevariation } = this.props;
-        const list = PortfolioListContent.slice(0 , this.props.item);
-        return(
-            <React.Fragment> 
-                {list.map((value , index) => (
-                    <div className={`${column}`} key={index}>
-                        <div className={`portfolio ${styevariation}`}>
-                            <div className="thumbnail-inner">
-                                <div className={`thumbnail ${value.image}`}></div>
-                                <div className={`bg-blr-image ${value.image}`}></div>
-                            </div>
-                            <div className="content">
-                                <div className="inner">
-                                    <p>{value.category}</p>
-                                    <h4><a href="/portfolio-details">{value.title}</a></h4>
-                                    <div className="portfolio-button">
-                                        <a className="rn-btn" href="/portfolio-details">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <Link className="link-overlay" to="/portfolio-details"></Link>
-                        </div>
-                    </div>
-                ))}
-               
-            </React.Fragment>
-        )
+        const {column} = this.props;
+        return (
+          <React.Fragment>
+            {TeamContent.map((value, i) => (
+              <div className={`${column}`} key={i}>
+                <div className='team'>
+                  <div className='thumbnail'>
+                    <img
+                      src={`/assets/images/portfolio/${value.images}.jpg`}
+                      alt='Blog Images'
+                    />
+                  </div>
+                  <div className='content'>
+                    <h4 className='title'>{value.title}</h4>
+                    <p className='designation'>{value.designation}</p>
+                  </div>
+                  <ul className='social-icon'>
+                    {value.socialNetwork.map((social, index) => (
+                      <li key={index}>
+                        <a href={`${social.url}`}>{social.icon}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </React.Fragment>
+        );
     }
 }
 export default PortfolioList;

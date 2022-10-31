@@ -83,9 +83,9 @@ class HeaderThree extends Component{
                       'home',
                       'products',
                       'research',
-                       'team',
+                      'team',
                       'about',
-                      // 'experts-panel',
+                      'experts-panel',
                       'partners',
                       'contact',
                     ]}
@@ -93,34 +93,51 @@ class HeaderThree extends Component{
                     offset={-200}
                   >
                     <li>
-                      <a href='#home'>Home</a>
+                      <a href={`${process.env.PUBLIC_URL}/#home`}>Home</a>
                     </li>
                     <li>
-                      <a href='#products'>Products</a>
+                      <a href={`${process.env.PUBLIC_URL}/#products`}>
+                        Products
+                      </a>
                     </li>
                     <li>
-                      <a href='#research'>Research</a>
+                      <a href={`${process.env.PUBLIC_URL}/#research`}>
+                        Research
+                      </a>
                     </li>
                     <li>
-                      <a href='#team'>Team</a>
+                      <a href={`${process.env.PUBLIC_URL}/#team`}>Team</a>
                     </li>
                     <li>
-                      <a href='#about'>About</a>
+                      <a href={`${process.env.PUBLIC_URL}/#about`}>About</a>
                     </li>
-                    {/* <li>
-                      <a href='#experts-panel'>Experts Panel</a>
-                    </li> */}
                     <li>
-                      <a href='#partners'>Partners</a>
+                      <a href={`${process.env.PUBLIC_URL}/#experts-panel`}>
+                        Experts Panel
+                      </a>
                     </li>
-                    <li className="has-droupdown"><Link >ressources</Link>
-                                    <ul className="submenu">
-                                        <li><Link to="/Blog">Blog</Link></li>
-                                        <li><Link to="/Events ">Events </Link></li>
-                                        <li><Link to="/News">News</Link></li>
-                                        <li><Link to="/Tools">Tools</Link></li>
-                                    </ul>
-                                </li>
+                    <li>
+                      <a href={`${process.env.PUBLIC_URL}/#partners`}>
+                        Partners
+                      </a>
+                    </li>
+                    <li className='has-droupdown'>
+                      <Link>Ressources</Link>
+                      <ul className='submenu'>
+                        {/* <li>
+                          <Link to='/Blog'>Blog</Link>
+                        </li> */}
+                        <li>
+                          <Link to='/events '>Events </Link>
+                        </li>
+                        <li>
+                          <Link to='/news'>News</Link>
+                        </li>
+                        {/* <li>
+                          <Link to='/Tools'>Tools</Link>
+                        </li> */}
+                      </ul>
+                    </li>
                     <li>
                       <a href='#contact'>Contact</a>
                     </li>

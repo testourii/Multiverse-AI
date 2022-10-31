@@ -12,13 +12,13 @@ const ServiceList = [
     icon: <FaFish />,
     title: 'Aqua Scan',
     description:
-      'Aquaculture management system.',
+      'Aquaculture management system',
   },
   {
     icon: <LunchDiningOutlinedIcon sx={{ fontSize: 50 }} />,
     title: 'Food Scan',
     description:
-      'Food safety assessments.',
+      'Food safety assessments',
   },
   // {
   //   icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
@@ -30,7 +30,7 @@ const ServiceList = [
     icon: <MedicationOutlinedIcon sx={{ fontSize: 50 }} />,
     title: 'Drug Scan',
     description:
-      'Drug combination to reduce therapeutic failure.',
+      'Drug combination to reduce therapeutic failure',
   },
 ];
 
@@ -51,7 +51,7 @@ const ServiceListReady = [
   },
   {
     icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'Tik Scan ',
+    title: 'Tick Scan ',
     description:
       'Ectoparasite identification',
     url: 'http://tickscan.icarda.org/',

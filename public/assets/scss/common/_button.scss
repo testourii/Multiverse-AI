@@ -63,6 +63,35 @@ button {
             }
         }
     }
+    &.rn-btn2 {
+        padding: 0 23px;
+        height: 40px;
+        display: inline-block;
+        line-height: 34px;
+        border: 2px solid aqua;
+        border-radius: 4px;
+        font-size: 14px;
+        position: relative;
+        z-index: 2;
+        // font-family: Montserrat;
+        color: aqua;
+        letter-spacing: 0.2px;
+        @extend %transition;
+        text-transform: uppercase;
+        &:hover {
+            border: 2px solid aqua;
+            transform: translateY(-3px);
+            color: #ffffff;
+            background: aqua;
+        }
+        &.btn-white {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            &:hover {
+                border-color: aqua;
+            }
+        }
+    }
 }
 
 
