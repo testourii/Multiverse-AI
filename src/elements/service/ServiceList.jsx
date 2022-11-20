@@ -47,7 +47,7 @@ const ServiceListReady = [
     title: 'ATB Scan',
     description:
       'Antibiotic susceptibility test interpretation',
-    url: 'http://www.atbscan.tn:5000',
+    url: 'http://www.atbscan.tech:5000',
   },
   {
     icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,

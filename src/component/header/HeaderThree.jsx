@@ -81,12 +81,13 @@ class HeaderThree extends Component{
                     className='mainmenu'
                     items={[
                       'home',
-                      'products',
+                      'models',
                       'research',
                       'team',
                       'about',
                       'experts-panel',
                       'partners',
+                      'ressources',
                       'contact',
                     ]}
                     currentClassName='is-current'
@@ -96,8 +97,8 @@ class HeaderThree extends Component{
                       <a href={`${process.env.PUBLIC_URL}/#home`}>Home</a>
                     </li>
                     <li>
-                      <a href={`${process.env.PUBLIC_URL}/#products`}>
-                        Products
+                      <a href={`${process.env.PUBLIC_URL}/models`}>
+                        Models
                       </a>
                     </li>
                     <li>
@@ -128,7 +129,7 @@ class HeaderThree extends Component{
                           <Link to='/Blog'>Blog</Link>
                         </li> */}
                         <li>
-                          <Link to='/events '>Events </Link>
+                          <Link to={`${process.env.PUBLIC_URL}/events`}>Events </Link>
                         </li>
                         <li>
                           <Link to='/news'>News</Link>

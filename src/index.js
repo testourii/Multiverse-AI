@@ -11,6 +11,8 @@ import PageScrollTop from './component/PageScrollTop';
 import DarkPortfolioLanding from './dark/PortfolioLanding';
 import About from './elements/About';
 import Blog from './elements/Blog';
+import Models from './elements/Models';
+import Research from './elements/Research';
 
 
 import error404 from "./elements/error404";
@@ -40,6 +42,16 @@ class Root extends Component{
                   exact
                   path={`${process.env.PUBLIC_URL}/events`}
                   component={Blog}
+                />
+                <Route
+                  exact
+                  path={`${process.env.PUBLIC_URL}/models`}
+                  component={Models}
+                />
+                <Route
+                  exact
+                  path={`${process.env.PUBLIC_URL}/research`}
+                  component={Research}
                 />
 
                 <Route
