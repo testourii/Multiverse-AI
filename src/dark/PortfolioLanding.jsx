@@ -6,11 +6,12 @@ import HeaderThree from '../component/header/HeaderThree';
 import FooterTwo from '../component/footer/FooterTwo';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import ContactThree from '../elements/contact/ContactThree';
 import PortfolioList from '../elements/portfolio/PortfolioList';
 import BlogContent from '../elements/blog/BlogContent';
 import Slider from 'react-slick';
+import ModalVideo from 'react-modal-video'
 
 // import CounterOne from '../elements/counters/CounterOne';
 import Testimonial from '../elements/Testimonial';
@@ -28,7 +29,7 @@ const slideSlick = {
   adaptiveHeight: true,
   autoplay: true,
   speed: 2000,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 7000,
   pauseOnHover: false,
 };
 
@@ -41,7 +42,17 @@ const SlideList = [
     description:
       'AI-Empowered Digital Transition towards Sustainable Development.',
     buttonText: 'Blood Scan',
-    buttonLink: 'http://www.bloodscan.tn:5000',
+    buttonLink: 'http://54.200.220.211:5000',
+  },
+  {
+    textPosition: 'text-center',
+    category: '',
+    bgImage: 'bg_image--34',
+    title: 'ImmunoScan Thesis',
+    description:
+      "CARACTÉRISATION DE LA RÉPONSE IMMUNITAIRE POST-VACCINALE CONTRE LA NODAVIROSE CHEZ LE LOUP MARIN (Dicentrarchus labrax) EN UTILISANT L’APPROCHE MULTIOMIQUE DE PRÉCISION",
+    buttonText: 'Watch Video',
+    buttonLink: 'https://youtu.be/MCPXN4jVnic',
   },
   {
     textPosition: 'text-center',
@@ -62,19 +73,12 @@ const SlideList = [
       'Livestock in developing countries contribute up to 80% of agricultural GDP; 600 million rural poor people rely on livestock for their livelihoods.',
     buttonText: 'Read more',
     buttonLink: '',
-  },
-  {
-    textPosition: 'text-center',
-    bgImage: 'bg_image--32',
-    category: '',
-    title: 'ILRI at COP 27.',
-    description:
-      'ILRI and partners will be engaging in a number of events during the  27th session of the Conference of the Partiesto the UNFCCC, happening from 7-18 November 2022, Sharm El-Sheikh, Egypt.',
-    buttonText: 'Read more',
-    buttonLink: '',
-  },
+  }
 ];
+
 const PortfolioLanding = () => {
+  const [isOpen, setOpen] = useState(false)
+
   const particlesInit = useCallback(async (engine) => {
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -89,7 +93,7 @@ const PortfolioLanding = () => {
   return (
     <div>
       <Helmet pageTitle='Multiverse AI' />
-
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="MCPXN4jVnic" onClose={() => setOpen(false)} />
       <HeaderThree
         homeLink='/'
         headertransparent='header--transparent'
@@ -110,81 +114,83 @@ const PortfolioLanding = () => {
                   key={index}
                 >
                   {' '}
-                { value.title==="Multiverse AI" && <div className='frame-layout__particles'>
-                    <Particles
-                      id='tsparticles'
-                      init={particlesInit}
-                      loaded={particlesLoaded}
-                      options={{
-                        fullScreen: { enable: false },
-                        fpsLimit: 30,
-                        interactivity: {
-                          events: {
-                            onClick: {
+                  {value.title === 'Multiverse AI' && (
+                    <div className='frame-layout__particles'>
+                      <Particles
+                        id='tsparticles'
+                        init={particlesInit}
+                        loaded={particlesLoaded}
+                        options={{
+                          fullScreen: { enable: false },
+                          fpsLimit: 30,
+                          interactivity: {
+                            events: {
+                              onClick: {
+                                enable: true,
+                                mode: 'push',
+                              },
+                              onHover: {
+                                enable: true,
+                                mode: 'repulse',
+                              },
+                              resize: true,
+                            },
+                            modes: {
+                              push: {
+                                quantity: 4,
+                              },
+                              repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                              },
+                            },
+                          },
+                          particles: {
+                            color: {
+                              value: '#ffffff',
+                            },
+                            links: {
+                              color: '#ffffff',
+                              distance: 150,
                               enable: true,
-                              mode: 'push',
+                              opacity: 0.5,
+                              width: 1,
                             },
-                            onHover: {
+                            collisions: {
                               enable: true,
-                              mode: 'repulse',
                             },
-                            resize: true,
-                          },
-                          modes: {
-                            push: {
-                              quantity: 4,
-                            },
-                            repulse: {
-                              distance: 200,
-                              duration: 0.4,
-                            },
-                          },
-                        },
-                        particles: {
-                          color: {
-                            value: '#ffffff',
-                          },
-                          links: {
-                            color: '#ffffff',
-                            distance: 150,
-                            enable: true,
-                            opacity: 0.5,
-                            width: 1,
-                          },
-                          collisions: {
-                            enable: true,
-                          },
-                          move: {
-                            directions: 'none',
-                            enable: true,
-                            outModes: {
-                              default: 'bounce',
-                            },
-                            random: false,
-                            speed: 3,
-                            straight: false,
-                          },
-                          number: {
-                            density: {
+                            move: {
+                              directions: 'none',
                               enable: true,
-                              area: 1600,
+                              outModes: {
+                                default: 'bounce',
+                              },
+                              random: false,
+                              speed: 3,
+                              straight: false,
                             },
-                            value: 80,
+                            number: {
+                              density: {
+                                enable: true,
+                                area: 1600,
+                              },
+                              value: 80,
+                            },
+                            opacity: {
+                              value: 0.5,
+                            },
+                            shape: {
+                              type: 'circle',
+                            },
+                            size: {
+                              value: { min: 1, max: 5 },
+                            },
                           },
-                          opacity: {
-                            value: 0.5,
-                          },
-                          shape: {
-                            type: 'circle',
-                          },
-                          size: {
-                            value: { min: 1, max: 5 },
-                          },
-                        },
-                        detectRetina: true,
-                      }}
-                    />{' '}
-                  </div>}
+                          detectRetina: true,
+                        }}
+                      />{' '}
+                    </div>
+                  )}
                   <div className='container'>
                     <div className='row'>
                       <div className='col-lg-12'>
@@ -202,8 +208,15 @@ const PortfolioLanding = () => {
                           ) : (
                             ''
                           )}
-                          {value.buttonText ? (
-                            <div className='slide-btn'>
+                          {value.buttonText ? ( value.bgImage=== 'bg_image--34') ? (  
+                          <div onClick={()=> setOpen(true)} className='slide-btn'>
+                              <a
+                                className='rn-button-style--2 btn-primary-color'
+                              >
+                                {value.buttonText}
+                              </a>
+                            </div>):(
+                            <div  className='slide-btn'>
                               <a
                                 className='rn-button-style--2 btn-primary-color'
                                 href={`${value.buttonLink}`}
@@ -226,12 +239,67 @@ const PortfolioLanding = () => {
         </div>
       </div>
       {/* End Slider Area   */}
-
+      {/* Start About Area */}
+      <div className='about-area ptb--120 bg_color--1' id='intervention'>
+        <div className='about-wrapper'>
+          <div className='container'>
+            <div className='row row--35 align-items-center'>
+              <div className='col-lg-5'>
+                <div className='thumbnail'>
+                  <img
+                    className='w-100'
+                    src='/assets/images/about/intervention-1.png'
+                    alt='About Images'
+                  />
+                </div>
+              </div>
+              <div className='col-lg-7'>
+                <div className='about-inner inner'>
+                  <div className='section-title'>
+                    <h2 className='title'>Our latest intervention</h2>
+                    <p className='description'>
+                      Multiverse intervention to control fish diseases recent
+                      outbreak , bloodscan & atbscan toolkits were decisive.
+                    </p>
+                  </div>
+                  {/* <div className='row mt--30'>
+                      <div className='col-lg-6 col-md-12 col-sm-12 col-12'>
+                        <div className='about-us-list'>
+                          <h3 className='title'>Who we are</h3>
+                          <p>
+                            There are many vtions of passages of Lorem Ipsum
+                            available, but the majority have suffered.
+                          </p>
+                        </div>
+                      </div>
+                      <div className='col-lg-6 col-md-12 col-sm-12 col-12'>
+                        <div className='about-us-list'>
+                          <h3 className='title'>Who we are</h3>
+                          <p>
+                            There are many vtions of passages of Lorem Ipsum
+                            available, but the majority have suffered.
+                          </p>
+                        </div>
+                      </div>
+                    </div> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* End About Area */}
       <div className='rn-testimonial-area bg_color--1 ptb--120' id='SDG'>
         <div className='container'>
           <div className='col-lg-12'>
             <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
-              <h2 className='title'>Sustainable Development Goals</h2>
+              <a
+                href='https://sdgs.un.org/goals'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <h2 className='title'>Sustainable Development Goals</h2>
+              </a>
             </div>
           </div>
           <Goals />
@@ -263,7 +331,11 @@ const PortfolioLanding = () => {
                 <div className='col-lg-4 col-md-6 col-12' key={i}>
                   <div className='blog blog-style--1'>
                     <div className='thumbnail'>
-                      <a href={value.url}>
+                      <a
+                        href={value.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
                         <img
                           className='w-100'
                           src={`/assets/images/blog/blog-${value.images}.jpg`}
@@ -274,7 +346,13 @@ const PortfolioLanding = () => {
                     <div className='content'>
                       <p className='blogtype'>{value.category}</p>
                       <h4 className='title'>
-                        <a href={value.url}>{value.title}</a>
+                        <a
+                          href={value.url}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          {value.title}
+                        </a>
                       </h4>
                       <div className='blog-btn'>
                         <a className='rn-btn text-white' href={value.url}>
@@ -292,6 +370,8 @@ const PortfolioLanding = () => {
                   <a
                     className='rn-button-style--2 btn-solid'
                     href={`${process.env.PUBLIC_URL}/research`}
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     <span>More</span>
                   </a>
@@ -319,7 +399,7 @@ const PortfolioLanding = () => {
       {/* End CounterUp Area */}
 
       {/* Start Team Area  */}
-      <div className='rn-team-area ptb--120 bg_color--5' id='team'>
+      {/* <div className='rn-team-area ptb--120 bg_color--5' id='team'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6'>
@@ -332,8 +412,63 @@ const PortfolioLanding = () => {
             <Team column='col-lg-4 col-md-6 col-sm-6 col-12' />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End Team Area  */}
+
+      {/* Start expert Panel Area */}
+      <div id='experts-panel' className='fix'>
+        <div className='portfolio-area ptb--120 bg_color--5'>
+          <div className='portfolio-sacousel-inner'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
+                    <h2 className='title'>Experts Panel</h2>
+                    <p>
+                      Our experts bring together expertise in medical sciences,
+                      artificial intelligence and different life sciences
+                      industries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* <div className='row'>
+                <PortfolioList
+                  styevariation='text-center mt--40'
+                  column='col-lg-4 col-md-6 col-sm-6 col-12'
+                  item='6'
+                />
+              </div> */}
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='view-more-btn mt--60 mt_sm--30 text-center'>
+                    <a
+                      className='rn-button-style--2 btn-solid'
+                      href='https://docs.google.com/forms/d/e/1FAIpQLSdOFnBlw_M8cprPTYSEynFh3TKDujLCQOLvHK5J_5WqSv_V9g/viewform'
+                    >
+                      <span>Join Us</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* End expert Panel Area */}
+
+      {/* Start partners Area */}
+      <div className='rn-testimonial-area bg_color--1 ptb--120' id='partners'>
+        <div className='container'>
+          <div className='col-lg-12'>
+            <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
+              <h2 className='title'>We Work With the Best Partners</h2>
+            </div>
+          </div>
+          <Testimonial />
+        </div>
+      </div>
+      {/* End partners Area */}
 
       {/* Start About Area */}
       <div className='about-area ptb--120 bg_color--1' id='about'>
@@ -390,61 +525,6 @@ const PortfolioLanding = () => {
         </div>
       </div>
       {/* End About Area */}
-
-      {/* Start expert Panel Area */}
-      <div id='experts-panel' className='fix'>
-        <div className='portfolio-area ptb--120 bg_color--5'>
-          <div className='portfolio-sacousel-inner'>
-            <div className='container'>
-              <div className='row'>
-                <div className='col-lg-12'>
-                  <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
-                    <h2 className='title'>Experts Panel</h2>
-                    <p>
-                      Our experts bring together expertise in medical sciences,
-                      artificial intelligence and different life sciences
-                      industries.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className='row'>
-                <PortfolioList
-                  styevariation='text-center mt--40'
-                  column='col-lg-4 col-md-6 col-sm-6 col-12'
-                  item='6'
-                />
-              </div>
-              <div className='row'>
-                <div className='col-lg-12'>
-                  <div className='view-more-btn mt--60 mt_sm--30 text-center'>
-                    <a
-                      className='rn-button-style--2 btn-solid'
-                      href='https://docs.google.com/forms/d/e/1FAIpQLSdOFnBlw_M8cprPTYSEynFh3TKDujLCQOLvHK5J_5WqSv_V9g/viewform'
-                    >
-                      <span>Join Us</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* End expert Panel Area */}
-
-      {/* Start partners Area */}
-      <div className='rn-testimonial-area bg_color--1 ptb--120' id='partners'>
-        <div className='container'>
-          <div className='col-lg-12'>
-            <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
-              <h2 className='title'>We Work With the Best Partners</h2>
-            </div>
-          </div>
-          <Testimonial />
-        </div>
-      </div>
-      {/* End partners Area */}
 
       {/* Start Contact Area */}
       <div id='contact' className='fix'>

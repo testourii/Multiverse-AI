@@ -4,58 +4,60 @@ import LunchDiningOutlinedIcon from '@mui/icons-material/LunchDiningOutlined';
 import MedicationOutlinedIcon from '@mui/icons-material/MedicationOutlined';
 import VaccinesOutlinedIcon from '@mui/icons-material/VaccinesOutlined';
 import CoronavirusOutlinedIcon from '@mui/icons-material/CoronavirusOutlined';
+import BugReportIcon from '@mui/icons-material/BugReport';
 import { FaFish } from 'react-icons/fa'
 import Badge from '@mui/material/Badge';
 
 const ServiceList = [
-  {
-    icon: <FaFish />,
-    title: 'Aqua Scan',
-    description:
-      'Aquaculture management system',
-  },
-  {
-    icon: <LunchDiningOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'Food Scan',
-    description:
-      'Food safety assessments',
-  },
+  // {
+  //   icon: <FaFish />,
+  //   title: 'Aqua Scan',
+  //   description:
+  //     'Aquaculture management system',
+  // },
+  // {
+  //   icon: <LunchDiningOutlinedIcon sx={{ fontSize: 50 }} />,
+  //   title: 'Food Scan',
+  //   description:
+  //     'Food safety assessments',
+  // },
   // {
   //   icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
   //   title: 'Immuno Scan',
   //   description:
   //     'I throw myself down among the tall grass by the stream as I lie close to the earth.',
   // },
-  {
-    icon: <MedicationOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'Drug Scan',
-    description:
-      'Drug combination to reduce therapeutic failure',
-  },
+  
 ];
 
 const ServiceListReady = [
+   {
+    icon: <BugReportIcon sx={{ fontSize: 50 }} />,
+    title: 'Tick Scan ',
+    description:
+      'Ectoparasite identification',
+    url: 'http://tickscan.icarda.org/',
+  },
   {
     icon: <FiDroplet />,
     title: 'Blood Scan',
     description:
       'Blood Cells anomalies detection',
-    url: 'http://www.bloodscan.tn:5000',
-  },
-  {
-    icon: <CoronavirusOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'ATB Scan',
-    description:
-      'Antibiotic susceptibility test interpretation',
-    url: 'http://www.atbscan.tech:5000',
+    url: 'http://52.169.139.70:5000/',
   },
   {
     icon: <VaccinesOutlinedIcon sx={{ fontSize: 50 }} />,
-    title: 'Tick Scan ',
+    title: 'ATB Scan',
     description:
-      'Ectoparasite identification',
-    url: 'http://tickscan.icarda.org/',
-  }
+      'Antibiotic susceptibility test interpretation',
+    url: 'http://52.169.139.70:8080/',
+  },
+  // {
+  //   icon: <MedicationOutlinedIcon sx={{ fontSize: 50 }} />,
+  //   title: 'Drug Scan',
+  //   description:
+  //     'Drug combination to reduce therapeutic failure',
+  // },
 ];
 
 

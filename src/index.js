@@ -11,11 +11,13 @@ import PageScrollTop from './component/PageScrollTop';
 import DarkPortfolioLanding from './dark/PortfolioLanding';
 import About from './elements/About';
 import Blog from './elements/Blog';
+import Docs from './elements/Docs';
 import Models from './elements/Models';
 import Research from './elements/Research';
 
 
 import error404 from "./elements/error404";
+import 'react-modal-video/scss/modal-video.scss';
 
 
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
@@ -52,6 +54,11 @@ class Root extends Component{
                   exact
                   path={`${process.env.PUBLIC_URL}/research`}
                   component={Research}
+                />
+                <Route
+                  exact
+                  path={`${process.env.PUBLIC_URL}/docs`}
+                  component={Docs}
                 />
 
                 <Route

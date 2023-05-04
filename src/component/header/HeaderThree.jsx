@@ -81,13 +81,14 @@ class HeaderThree extends Component{
                     className='mainmenu'
                     items={[
                       'home',
+                      'intervention',
                       'models',
                       'research',
-                      'team',
-                      'about',
+                      // 'team',
                       'experts-panel',
                       'partners',
                       'ressources',
+                      'about',
                       'contact',
                     ]}
                     currentClassName='is-current'
@@ -97,21 +98,21 @@ class HeaderThree extends Component{
                       <a href={`${process.env.PUBLIC_URL}/#home`}>Home</a>
                     </li>
                     <li>
-                      <a href={`${process.env.PUBLIC_URL}/models`}>
-                        Models
+                      <a href={`${process.env.PUBLIC_URL}/#intervention`}>
+                        Interventions
                       </a>
+                    </li>
+                    <li>
+                      <a href={`${process.env.PUBLIC_URL}/models`}>Models</a>
                     </li>
                     <li>
                       <a href={`${process.env.PUBLIC_URL}/#research`}>
                         Research
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href={`${process.env.PUBLIC_URL}/#team`}>Team</a>
-                    </li>
-                    <li>
-                      <a href={`${process.env.PUBLIC_URL}/#about`}>About</a>
-                    </li>
+                    </li> */}
                     <li>
                       <a href={`${process.env.PUBLIC_URL}/#experts-panel`}>
                         Experts Panel
@@ -129,10 +130,15 @@ class HeaderThree extends Component{
                           <Link to='/Blog'>Blog</Link>
                         </li> */}
                         <li>
-                          <Link to={`${process.env.PUBLIC_URL}/events`}>Events </Link>
+                          <Link to={`${process.env.PUBLIC_URL}/events`}>
+                            Events{' '}
+                          </Link>
                         </li>
                         <li>
                           <Link to='/news'>News</Link>
+                        </li>
+                        <li>
+                          <Link to='/docs'>Models Documentation</Link>
                         </li>
                         {/* <li>
                           <Link to='/Tools'>Tools</Link>
@@ -140,7 +146,10 @@ class HeaderThree extends Component{
                       </ul>
                     </li>
                     <li>
-                      <a href='#contact'>Contact</a>
+                      <a href={`${process.env.PUBLIC_URL}/#about`}>About</a>
+                    </li>
+                    <li>
+                      <a href={`${process.env.PUBLIC_URL}/#contact`}>Contact</a>
                     </li>
                   </Scrollspy>
                 </nav>
