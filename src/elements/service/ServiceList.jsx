@@ -36,7 +36,7 @@ const ServiceListReady = [
     title: 'Tick Scan ',
     description:
       'Ectoparasite identification',
-    url: 'http://tickscan.icarda.org/',
+    url: 'https://github.com/icarda-git/TickScan',
   },
   {
     icon: <FiDroplet />,
